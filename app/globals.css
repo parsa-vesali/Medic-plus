@@ -86,6 +86,10 @@
     @apply text-14-regular justify-items-end text-center text-dark-600 xl:text-left;
   }
 
+  .input-wrapp {
+    @apply flex flex-col gap-6 xl:flex-row
+  }
+
   /* ==== SUCCESS */
   .success-img {
     @apply m-auto flex flex-1 flex-col items-center justify-between gap-10 py-10;
@@ -168,7 +172,7 @@
   }
 
   .text-18-bold {
-    @apply text-[18px] leading-[24px] font-bold;
+    @apply text-[18px] leading-[24px] font-Dana-Bold;
   }
 
   .text-16-semibold {

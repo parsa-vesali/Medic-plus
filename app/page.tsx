@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex h-screen max-h-screen md:overflow-y-hidden">
+    <div className="flex h-screen max-h-screen">
       {/* OTP */}
-      <section className="remove-scrollbar container my-auto">
+      <section className="remove-scrollbar container">
         <div className="sub-container max-w-[496px]">
           <span className="flex items-center gap-2 mb-8">
             <Image
@@ -33,11 +33,11 @@ export default function Home() {
       </section>
 
       <Image
-        src='/assets/images/bg.jpg'
+        src='/assets/images/register-img.png'
         height={1000}
         width={1000}
         alt="Patient"
-        className="side-img max-w-[50%]"
+        className="side-img max-w-[390px]"
       />
     </div>
   );
