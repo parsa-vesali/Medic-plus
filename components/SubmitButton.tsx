@@ -9,7 +9,7 @@ interface ButtonProps {
 }
 const SubmitButton = ({ isLoading, className, children }: ButtonProps) => {
     return (
-        <Button type='submit' disabled={isLoading} className={className ?? 'shad-primary-btn w-full p-5  w-full'}>
+        <Button type='submit' disabled={isLoading} className={className ?? 'shad-primary-btn w-full p-5'}>
             {isLoading ? (
                 <div className="flex items-center g-4">
                     درحال بارگذاری

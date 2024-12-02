@@ -27,57 +27,59 @@ export const PatientFormDefaultValues = {
 };
 
 export const IdentificationTypes = [
-  "Birth Certificate",
-  "Driver's License",
-  "Medical Insurance Card/Policy",
-  "Military ID Card",
-  "National Identity Card",
-  "Passport",
-  "Resident Alien Card (Green Card)",
-  "Social Security Card",
-  "State ID Card",
-  "Student ID Card",
-  "Voter ID Card",
+  "گواهی تولد",
+  "گواهینامه رانندگی",
+  "کارت/بیمه‌نامه پزشکی",
+  "کارت شناسایی نظامی",
+  "کارت ملی",
+  "گذرنامه",
+  "کارت اقامت (گرین کارت)",
+  "کارت تأمین اجتماعی",
+  "کارت شناسایی ایالتی",
+  "کارت شناسایی دانشجویی",
+  "کارت رأی‌دهی",
 ];
+
 
 export const Doctors = [
   {
     image: "/assets/images/dr-green.png",
-    name: "John Green",
+    name: "جان گرین",
   },
   {
     image: "/assets/images/dr-cameron.png",
-    name: "Leila Cameron",
+    name: "لیلا کامرون",
   },
   {
     image: "/assets/images/dr-livingston.png",
-    name: "David Livingston",
+    name: "دیوید لیوینگستون",
   },
   {
     image: "/assets/images/dr-peter.png",
-    name: "Evan Peter",
+    name: "ایوان پیتر",
   },
   {
     image: "/assets/images/dr-powell.png",
-    name: "Jane Powell",
+    name: "جین پاول",
   },
   {
     image: "/assets/images/dr-remirez.png",
-    name: "Alex Ramirez",
+    name: "الکس رمی‌رز",
   },
   {
     image: "/assets/images/dr-lee.png",
-    name: "Jasmine Lee",
+    name: "جاسمین لی",
   },
   {
     image: "/assets/images/dr-cruz.png",
-    name: "Alyana Cruz",
+    name: "الیانا کروز",
   },
   {
     image: "/assets/images/dr-sharma.png",
-    name: "Hardik Sharma",
+    name: "هاردیک شارما",
   },
 ];
+
 
 export const StatusIcon = {
   scheduled: "/assets/icons/check.svg",

@@ -83,7 +83,7 @@
   }
 
   .copyright {
-    @apply text-14-regular justify-items-end text-center text-dark-600 xl:text-left;
+    @apply text-14-regular justify-items-start text-center text-dark-600 xl:text-right;
   }
 
   .input-wrapp {
@@ -188,7 +188,7 @@
   }
 
   .text-14-regular {
-    @apply text-[14px] leading-[18px] font-normal;
+    @apply text-[14px] leading-[18px] font-Dana-Medium;
   }
 
   .text-12-regular {

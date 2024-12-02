@@ -24,14 +24,11 @@ const Register = async ({ params: { userId } }: SearchParamProps) => {
 
                     <RegisterForm user={user} />
 
-                    <div className="text-sm mt-10 flex items-center justify-between ">
-                        <p className="text-dark-600">
+                    
+                        <p className="copyright py-12">
                             &copy; {new Date().getFullYear()} مدیک پلاس. تمامی حقوق محفوظ است.
                         </p>
-                        <Link href="/?admin=true" className="text-sky-500 font-Dana-Medium">
-                            پنل ادمین
-                        </Link>
-                    </div>
+                    
                 </div>
             </section>
 
