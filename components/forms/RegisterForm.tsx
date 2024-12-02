@@ -7,12 +7,12 @@ import { z } from "zod"
 import { Form, FormControl } from "@/components/ui/form"
 import CustomFormField from '../CustomFormField'
 import SubmitButton from '../SubmitButton'
-import { UserFormValidation } from '@/lib/validation'
+import { PatientFormValidation, UserFormValidation } from '@/lib/validation'
 import { useRouter } from 'next/navigation'
-import { createUser } from '@/lib/actions/patient.actions'
+import { createUser, registerPatient } from '@/lib/actions/patient.actions'
 import { FormFieldType } from './PatientForm'
 import { RadioGroup, RadioGroupItem } from '../ui/radio-group'
-import { Doctors, GenderOptions, IdentificationTypes } from '@/constant'
+import { Doctors, GenderOptions, IdentificationTypes, PatientFormDefaultValues } from '@/constant'
 import { Label } from '../ui/label'
 import { SelectItem } from '../ui/select'
 import Image from 'next/image'
@@ -23,29 +23,44 @@ const RegisterForm = ({ user }: { user: User }) => {
     const [isLoading, setIsLoading] = useState(false)
     const router = useRouter()
 
-    const form = useForm<z.infer<typeof UserFormValidation>>({
-        resolver: zodResolver(UserFormValidation),
+    const form = useForm<z.infer<typeof PatientFormValidation>>({
+        resolver: zodResolver(PatientFormValidation),
         defaultValues: {
+            ...PatientFormDefaultValues,
             name: "",
             email: "",
             phone: "",
         },
     });
 
-    const onSubmit = async (values: z.infer<typeof UserFormValidation>) => {
+    const onSubmit = async (values: z.infer<typeof PatientFormValidation>) => {
         setIsLoading(true);
+        // Store file info in form data as
+        let formData;
+        if (
+            values.identificationDocument &&
+            values.identificationDocument?.length > 0
+        ) {
+            const blobFile = new Blob([values.identificationDocument[0]], {
+                type: values.identificationDocument[0].type,
+            });
 
+            formData = new FormData();
+            formData.append("blobFile", blobFile);
+            formData.append("fileName", values.identificationDocument[0].name);
+        }
         try {
-            const userData = {
-                name: values.name,
-                email: values.email,
-                phone: values.phone,
-            };
+            const patient = {
+                ...values,
+                userId: user.$id,
+                birthDate: new Date(values.birthDate),
+                identificationDocument: formData,
+            }
 
-            const user = await createUser(userData);
-
-            if (user) {
-                router.push(`/patients/${user.$id}/register`);
+            // @ts-ignore
+            const newPatient = await registerPatient(patient);
+            if (newPatient) {
+                router.push(`/patients/${user.$id}/new-appointment`);
             }
         } catch (error) {
             console.log(error);
@@ -57,12 +72,12 @@ const RegisterForm = ({ user }: { user: User }) => {
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-12 flex-1">
-                <section className='space-y-4'>
-                    <h1 className='text-2xl'>به دنیای سلامت خوش آمدید 💙</h1>
-                    <p className='text-dark-700'>برای ادامه، لطفاً اطلاعات خود را ثبت نمایید.</p>
-                </section>
-
                 <section className='space-y-6'>
+                    <section className='space-y-4'>
+                        <h1 className='text-2xl font-Dana-Bold'>به دنیای سلامت خوش آمدید 💙</h1>
+                        <p className='text-dark-700'>برای ادامه، لطفاً اطلاعات خود را ثبت نمایید.</p>
+                    </section>
+
                     <div className="mb-9 space-y-1">
                         <h2 className='sub-header'>اطلاعات شخصی</h2>
                     </div>
@@ -322,7 +337,7 @@ const RegisterForm = ({ user }: { user: User }) => {
                         label="تایید می‌کنم که سیاست حفظ حریم خصوصی را بررسی کرده و با آن موافقم."
                     />
                 </section>
-                        
+
 
                 <SubmitButton isLoading={isLoading}>ادامه </SubmitButton>
             </form>
