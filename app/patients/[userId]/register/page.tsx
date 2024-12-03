@@ -1,7 +1,6 @@
 import RegisterForm from '@/components/forms/RegisterForm'
 import { getUser } from '@/lib/actions/patient.actions'
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 
 const Register = async ({ params: { userId } }: SearchParamProps) => {
@@ -16,7 +15,7 @@ const Register = async ({ params: { userId } }: SearchParamProps) => {
                             src='/assets/icons/logo-icon.svg'
                             height={1000}
                             width={1000}
-                            alt="Logo" 
+                            alt="Logo"
                             className="w-fit"
                         />
                         <h2 className="font-Dana-Bold text-2xl"> مدیک‌<span className=" text-sky-500">پلاس</span></h2>
@@ -24,11 +23,11 @@ const Register = async ({ params: { userId } }: SearchParamProps) => {
 
                     <RegisterForm user={user} />
 
-                    
-                        <p className="copyright py-12">
-                            &copy; {new Date().getFullYear()} مدیک پلاس. تمامی حقوق محفوظ است.
-                        </p>
-                    
+
+                    <p className="copyright py-12">
+                        &copy; {new Date().getFullYear()} مدیک پلاس. تمامی حقوق محفوظ است.
+                    </p>
+
                 </div>
             </section>
 
