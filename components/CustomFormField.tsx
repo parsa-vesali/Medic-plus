@@ -68,10 +68,10 @@ const RenderField = ({ field, props }: { field: any, props: CustomProps }) => {
             return (
                 <FormControl>
                     <PhoneInput
-                        defaultCountry='IR'
+                        defaultCountry="IR"
                         international
                         withCountryCallingCode
-                        placeholder={placeholder}
+                        placeholder={props.placeholder}
                         value={field.value as E164Number | undefined}
                         onChange={field.onChange}
                         className='input-phone'
@@ -125,13 +125,13 @@ const RenderField = ({ field, props }: { field: any, props: CustomProps }) => {
             return (
                 <FormControl>
                     <div className="flex items-center gap-4">
-                        <Checkbox 
-                        id={props.name}
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
+                        <Checkbox
+                            id={props.name}
+                            checked={field.value}
+                            onCheckedChange={field.onChange}
                         />
                         <label htmlFor={props.name} className='checkbox-label'>
-                            {props.label }
+                            {props.label}
                         </label>
                     </div>
                 </FormControl>

@@ -72,12 +72,11 @@ const RegisterForm = ({ user }: { user: User }) => {
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-12 flex-1">
+                <section className='mb-12 space-y-2'>
+                    <h1 className='text-2xl font-Dana-Medium'>کاربر گرامی، خوش آمدید 👋</h1>
+                    <p className='text-dark-600'>لطفاً اطلاعات خود را تکمیل نمایید.</p>
+                </section>
                 <section className='space-y-6'>
-                    <section className='space-y-4'>
-                        <h1 className='text-2xl font-Dana-Bold'>به دنیای سلامت خوش آمدید 💙</h1>
-                        <p className='text-dark-700'>برای ادامه، لطفاً اطلاعات خود را ثبت نمایید.</p>
-                    </section>
-
                     <div className="mb-9 space-y-1">
                         <h2 className='sub-header'>اطلاعات شخصی</h2>
                     </div>
@@ -86,7 +85,8 @@ const RegisterForm = ({ user }: { user: User }) => {
                         fieldType={FormFieldType.INPUT}
                         control={form.control}
                         name="name"
-                        placeholder="نام خود را وارد کنید"
+                        label="نام و نام خانوادگی"
+                        placeholder="نام کامل خود را وارد کنید"
                         iconSrc="/assets/icons/user.svg"
                         iconAlt="user"
                     />

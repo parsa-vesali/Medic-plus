@@ -4,8 +4,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Care Pulse",
-  description: "A Healthcare Management system",
+  title: "مدیک پلاس",
+  description: "سیستم مدیریت و نوبت دهی بیمارستان",
 };
 
 export default function RootLayout({

@@ -13,17 +13,18 @@ export default function Home({searchParams} : SearchParamProps) {
       {/* OTP */}
       {isAdmin && <PassKeyModal />}
       <section className="remove-scrollbar container">
-        <div className="sub-container max-w-[496px]">
-          <span className="flex items-center gap-2 mb-8">
+        <div className="sub-container max-w-[496px] justify-start">
+          {/* LOGO */}
+          <Link href='/' className="flex items-center gap-1 mb-10">
             <Image
               src='/assets/icons/logo-icon.svg'
               height={1000}
               width={1000}
               alt="Logo"
-              className="w-fit"
+              className="w-10"
             />
             <h2 className="font-Dana-Bold text-2xl"> مدیک‌<span className=" text-sky-500">پلاس</span></h2>
-          </span>
+          </Link>
 
           <PatientForm />
 
@@ -43,7 +44,7 @@ export default function Home({searchParams} : SearchParamProps) {
         height={1000}
         width={1000}
         alt="Patient"
-        className="side-img max-w-[390px]"
+        className="side-img max-w-[380px]"
       />
     </div>
   );

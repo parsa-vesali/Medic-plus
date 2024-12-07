@@ -8,7 +8,7 @@ export const UserFormValidation = z.object({
   email: z.string().email("آدرس ایمیل نامعتبر است"),
   phone: z
     .string()
-    .refine((phone) => /^\+\d{10,15}$/.test(phone), "شماره تلفن نامعتبر است"),
+    .refine((phone) => /^\+\d{12}$/.test(phone), "شماره تلفن نامعتبر است"),
 });
 
 export const PatientFormValidation = z.object({
@@ -19,9 +19,9 @@ export const PatientFormValidation = z.object({
   email: z.string().email("آدرس ایمیل نامعتبر است"),
   phone: z
     .string()
-    .refine((phone) => /^\+\d{10,15}$/.test(phone), "شماره تلفن نامعتبر است"),
+    .refine((phone) => /^\+\d{12}$/.test(phone), "شماره تلفن نامعتبر است"),
   birthDate: z.coerce.date(),
-  gender: z.enum(["male", "female", "other"]),
+  gender: z.enum(["آقا", "خانوم"]),
   address: z
     .string()
     .min(5, "آدرس باید حداقل ۵ کاراکتر باشد")
@@ -37,7 +37,7 @@ export const PatientFormValidation = z.object({
   emergencyContactNumber: z
     .string()
     .refine(
-      (emergencyContactNumber) => /^\+\d{10,15}$/.test(emergencyContactNumber),
+      (emergencyContactNumber) => /^\+\d{12}$/.test(emergencyContactNumber),
       "شماره تماس اضطراری نامعتبر است"
     ),
   primaryPhysician: z.string().min(2, "لطفاً حداقل یک پزشک انتخاب کنید"),

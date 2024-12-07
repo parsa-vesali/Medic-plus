@@ -60,18 +60,19 @@ const PatientForm = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 flex-1">
-        <section className='mb-10 space-y-2 '>
-          <h1 className='text-2xl'>به دنیای سلامت خوش آمدید 💙</h1>
-          <p className='text-dark-700'>برای ادامه، لطفاً اطلاعات خود را ثبت نمایید.</p>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 flex-1">
+        <section className='mb-12 space-y-2'>
+          <h1 className='text-2xl font-Dana-Medium'>کاربر گرامی، خوش آمدید 👋</h1>
+          <p className='text-dark-600'>لطفاً برای شروع، اطلاعات خود را تکمیل نمایید.</p>
         </section>
+
 
         <CustomFormField
           fieldType={FormFieldType.INPUT}
           control={form.control}
           name="name"
           label="نام و نام خانوادگی"
-          placeholder="نام خود را وارد کنید"
+          placeholder="نام کامل خود را وارد کنید"
           iconSrc="/assets/icons/user.svg"
           iconAlt="user"
         />
