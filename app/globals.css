@@ -63,7 +63,7 @@
   }
 
   .header {
-    @apply text-3xl md:text-4xl font-Dana-Bold;
+    @apply text-2xl md:text-3xl font-Dana-Bold;
   }
 
   .sub-header {
@@ -101,7 +101,7 @@
 
   /* ===== ADMIN */
   .admin-header {
-    @apply sticky top-3 z-20 mx-3 flex items-center justify-between rounded-2xl bg-dark-200 px-[5%] py-5 shadow-lg xl:px-12;
+    @apply sticky top-3 z-20 mx-3 flex items-center justify-between rounded-2xl bg-dark-200 px-[5%] py-5 shadow-lg xl:px-12 my-2;
   }
 
   .admin-main {
@@ -168,7 +168,7 @@
   }
 
   .text-32-bold {
-    @apply text-[32px] leading-[36px] font-bold;
+    @apply text-[32px] leading-[36px] font-Dana-Medium;
   }
 
   .text-18-bold {
@@ -184,7 +184,7 @@
   }
 
   .text-14-medium {
-    @apply text-[14px] leading-[18px] font-medium;
+    @apply text-[14px] leading-[18px] font-Dana-Medium;
   }
 
   .text-14-regular {
