@@ -101,7 +101,7 @@
 
   /* ===== ADMIN */
   .admin-header {
-    @apply sticky top-3 z-20 mx-3 flex items-center justify-between rounded-2xl bg-dark-200 px-[5%] py-5 shadow-lg xl:px-12 my-2;
+    @apply flex items-center justify-between py-8
   }
 
   .admin-main {
@@ -223,7 +223,9 @@
   .shad-input {
     @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
-
+  .search-input {
+    @apply  min-w-72 bg-dark-200 ring-0 outline-none border-none !important
+  }
   .shad-input-icon {
     @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
