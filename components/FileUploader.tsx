@@ -37,7 +37,7 @@ const FileUploader = ({ files, onChange }: FileUploaderProps) => {
                         />
                         <div className="file-upload_label">
                             <p className="text-14-regular">
-                                <span className="text-green-500">برای آپلود کلیک کنید </span>
+                                <span className="text-sky-500">برای آپلود کلیک کنید </span>
                                 یا فایل را بکشید و رها کنید
                             </p>
                             <p className="text-12-regular">

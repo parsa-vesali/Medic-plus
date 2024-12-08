@@ -25,7 +25,7 @@ const AppointmentForm = ({ userId, patientId, type, appointment, setOpen }:
     patientId: string,
     type: 'create' | 'cancel' | 'schedule',
     appointment?: Appointment,
-    setOpen: (open: boolean) => void,
+    setOpen?: (open: boolean) => void,
   }) => {
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
@@ -118,11 +118,9 @@ const AppointmentForm = ({ userId, patientId, type, appointment, setOpen }:
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 flex-1">
         {type === 'create' && (
-          <section className="mb-12 space-y-4">
-            <h1 className="text-2xl font-Dana-Bold">مراجعه جدید</h1>
-            <p className="text-dark-700">
-              درخواست یک ملاقات جدید در 10 ثانیه.
-            </p>
+          <section className='mb-12 space-y-2'>
+            <h1 className='text-2xl font-Dana-Medium'>درخواست نوبت 🏥</h1>
+            <p className='text-dark-600'>لطفاً اطلاعات خود را وارد نمایید.</p>
           </section>
         )}
 
@@ -165,8 +163,8 @@ const AppointmentForm = ({ userId, patientId, type, appointment, setOpen }:
                 fieldType={FormFieldType.TEXTAREA}
                 control={form.control}
                 name="reason"
-                label="دلیل نوبت"
-                placeholder="چکاپ ماهانه , سالانه"
+                label="دلیل مراجعه"
+                placeholder="مثال : چکاپ ماهانه"
                 disabled={type === "schedule"}
               />
 
@@ -174,8 +172,8 @@ const AppointmentForm = ({ userId, patientId, type, appointment, setOpen }:
                 fieldType={FormFieldType.TEXTAREA}
                 control={form.control}
                 name="note"
-                label="توضیحات/یادداشت‌ها"
-                placeholder="ترجیحاً وقت‌های بعدازظهر"
+                label="توضیحات / یادداشت‌ها"
+                placeholder="مثال : ترجیحاً وقت‌های بعدازظهر"
                 disabled={type === "schedule"}
               />
 

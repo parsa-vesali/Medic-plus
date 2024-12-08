@@ -15,13 +15,14 @@ const Success = async ({ params: { userId }, searchParams }: SearchParamProps) =
     return (
         <div className='flex h-screen max-h-screen px-[5%]'>
             <div className="success-img ">
-                <Link href='/' className='flex items-center gap-2'>
+                {/* LOGO */}
+                <Link href='/' className="flex items-center gap-1 mb-8">
                     <Image
                         src='/assets/icons/logo-icon.svg'
-                        height={800}
-                        width={800}
+                        height={1000}
+                        width={1000}
                         alt="Logo"
-                        className="w-fit"
+                        className="w-10"
                     />
                     <h2 className="font-Dana-Bold text-2xl"> مدیک‌<span className=" text-sky-500">پلاس</span></h2>
                 </Link>
@@ -34,10 +35,10 @@ const Success = async ({ params: { userId }, searchParams }: SearchParamProps) =
                         className='mb-6'
                         alt='Success'
                     />
-                    <h2 className='header mb-6 max-w-[600px] text-center'>
-                        درخواست <span className="text-green-500">نوبت شما</span> با موفقیت ثبت شد!
+                    <h2 className='header mb-2 max-w-[600px] text-center'>
+                        درخواست <span className="text-sky-500">نوبت شما</span> با موفقیت ثبت شد!
                     </h2>
-                    <p>به زودی برای تأیید با شما تماس خواهیم گرفت.</p>
+                    <p className='text-dark-600'>کاربر گرامی , به زودی برای تأیید نوبت با شما تماس خواهیم گرفت.</p>
                 </section>
 
 
@@ -68,7 +69,7 @@ const Success = async ({ params: { userId }, searchParams }: SearchParamProps) =
 
                 <Button variant="outline" className='shad-primary-btn' asChild>
                     <Link href={`/patients/${userId}/new-appointment`}>
-                        رزرو نوبت جدید
+                        ثبت نوبت جدید
                     </Link>
                 </Button>
 
