@@ -74,7 +74,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-12 flex-1">
                 <section className='mb-12 space-y-2'>
                     <h1 className='text-2xl font-Dana-Medium'>کاربر گرامی، خوش آمدید 👋</h1>
-                    <p className='text-dark-600'>لطفاً اطلاعات خود را تکمیل نمایید.</p>
+                    <p className='text-dark-600'>لطفاً اطلاعات خود را به درستی وارد نمایید.</p>
                 </section>
                 <section className='space-y-6'>
                     <div className="mb-9 space-y-1">
@@ -154,7 +154,7 @@ const RegisterForm = ({ user }: { user: User }) => {
                         control={form.control}
                         name="address"
                         label="آدرس"
-                        placeholder="خیابان 14، نیویورک، NY - 5101"
+                        placeholder="آدرس محل سکونت خود را وارد کنید."
                     />
 
                     <CustomFormField
@@ -162,7 +162,7 @@ const RegisterForm = ({ user }: { user: User }) => {
                         control={form.control}
                         name="occupation"
                         label="شغل"
-                        placeholder="مهندس نرم‌افزار"
+                        placeholder="شغل خود را وارد کنید"
                     />
                 </div>
                 {/* Emergency Contact Name & Emergency Contact Number */}
@@ -171,8 +171,8 @@ const RegisterForm = ({ user }: { user: User }) => {
                         fieldType={FormFieldType.INPUT}
                         control={form.control}
                         name="emergencyContactName"
-                        label="نام تماس اضطراری"
-                        placeholder="نام سرپرست"
+                        label="نام همراه "
+                        placeholder="نام همراه خود را وارد کنید"
                     />
 
                     <CustomFormField
@@ -220,15 +220,15 @@ const RegisterForm = ({ user }: { user: User }) => {
                         control={form.control}
                         name="insuranceProvider"
                         label="شرکت بیمه"
-                        placeholder="بیمه ایران"
+                        placeholder="نام بیمه خود را وارد کنید."
                     />
 
                     <CustomFormField
                         fieldType={FormFieldType.INPUT}
                         control={form.control}
                         name="insurancePolicyNumber"
-                        label="شماره بیمه‌نامه"
-                        placeholder="۱۲۳۴۵۶۷۸۹"
+                        label="شماره بیمه"
+                        placeholder="شماره بیمه خود را وارد کنید."
                     />
                 </div>
 
@@ -239,15 +239,15 @@ const RegisterForm = ({ user }: { user: User }) => {
                         control={form.control}
                         name="allergies"
                         label="آلرژی‌ها (در صورت وجود)"
-                        placeholder="بادام‌زمینی، پنی‌سیلین، گرده گل"
+                        placeholder="مثال : پنی‌سیلین، گرده گل"
                     />
 
                     <CustomFormField
                         fieldType={FormFieldType.TEXTAREA}
                         control={form.control}
                         name="currentMedication"
-                        label="داروهای فعلی"
-                        placeholder="ایبوپروفن ۲۰۰ میلی‌گرم، لووتیروکسین ۵۰ میکروگرم"
+                        label="داروهای فعلی (در صورت وجود)"
+                        placeholder="نام داروی فعلی خود را وارد کنید."
                     />
                 </div>
 
@@ -257,16 +257,16 @@ const RegisterForm = ({ user }: { user: User }) => {
                         fieldType={FormFieldType.TEXTAREA}
                         control={form.control}
                         name="familyMedicalHistory"
-                        label="سابقه پزشکی خانوادگی (در صورت مرتبط بودن)"
-                        placeholder="مادر سرطان مغز داشت، پدر فشار خون دارد"
+                        label="سابقه بیماری خانوادگی (در صورت مرتبط بودن)"
+                        placeholder=""
                     />
 
                     <CustomFormField
                         fieldType={FormFieldType.TEXTAREA}
                         control={form.control}
                         name="pastMedicalHistory"
-                        label="سابقه پزشکی گذشته"
-                        placeholder="عمل آپاندیس در سال ۲۰۱۵، آسم از دوران کودکی"
+                        label="سابقه بیماری گذشته"
+                        placeholder=""
                     />
                 </div>
 
@@ -279,8 +279,8 @@ const RegisterForm = ({ user }: { user: User }) => {
                         fieldType={FormFieldType.SELECT}
                         control={form.control}
                         name="identificationType"
-                        label="نوع شناسایی"
-                        placeholder="نوع شناسایی را انتخاب کنید"
+                        label="نوع مدرک شناسایی"
+                        placeholder="نوع مدرک شناسایی را انتخاب کنید"
                     >
                         {IdentificationTypes.map((type) => (
                             <SelectItem key={type} value={type}>
@@ -293,8 +293,8 @@ const RegisterForm = ({ user }: { user: User }) => {
                         fieldType={FormFieldType.INPUT}
                         control={form.control}
                         name="identificationNumber"
-                        label="شماره شناسایی"
-                        placeholder="123456789"
+                        label="شماره ملی"
+                        placeholder="شماره ملی خود را وارد کنید."
                     />
 
                     <CustomFormField

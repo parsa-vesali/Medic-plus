@@ -63,7 +63,7 @@ const PatientForm = () => {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 flex-1">
         <section className='mb-12 space-y-2'>
           <h1 className='text-2xl font-Dana-Medium'>کاربر گرامی، خوش آمدید 👋</h1>
-          <p className='text-dark-600'>لطفاً برای شروع، اطلاعات خود را تکمیل نمایید.</p>
+          <p className='text-dark-600'>لطفاً اطلاعات خود را به درستی وارد نمایید.</p>
         </section>
 
 

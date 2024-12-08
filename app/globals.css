@@ -117,6 +117,10 @@
     @apply flex h-full flex-1 items-center gap-2 rounded-md border border-dashed border-dark-500 bg-dark-400 p-3;
   }
 
+  .radio-group button[aria-checked="true"] {
+    @apply bg-sky-500 border-none focus-visible:ring-inset focus:ring-inset !important;
+  }
+  
   .checkbox-label {
     @apply cursor-pointer text-sm font-medium text-dark-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70 md:leading-none;
   }
@@ -237,7 +241,7 @@
   }
 
   .shad-select-trigger {
-    @apply bg-dark-400  placeholder:text-dark-600 border-dark-500 h-11 focus:ring-0 focus:ring-offset-0 !important;
+    @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 h-11 focus:ring-0 focus:ring-offset-0 ring-sky-500 !important;
   }
 
   .shad-select-content {
@@ -253,7 +257,7 @@
   }
 
   .shad-error {
-    @apply text-red-400 !important;
+    @apply text-red-500 !important;
   }
 
   .shad-table {
