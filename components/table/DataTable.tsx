@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/table"
 import { Button } from "../ui/button"
 import Image from "next/image"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -89,13 +90,14 @@ export function DataTable<TData, TValue>({
           disabled={!table.getCanPreviousPage()}
           className="shad-gray-btn cursor-pointer"
         >
-          <Image
+          {/* <Image
             src="/assets/icons/arrow.svg"
             width={24}
             height={24}
             alt="arrow"
             className="rotate-180"
-          />
+          /> */}
+          <ChevronRight />
         </Button>
         <Button
           variant="outline"
@@ -104,12 +106,7 @@ export function DataTable<TData, TValue>({
           disabled={!table.getCanNextPage()}
           className="shad-gray-btn cursor-pointer"
         >
-          <Image
-            src="/assets/icons/arrow.svg"
-            width={24}
-            height={24}
-            alt="arrow "
-          />
+         <ChevronLeft />
         </Button>
       </div>
     </div>

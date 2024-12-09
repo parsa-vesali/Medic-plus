@@ -14,8 +14,8 @@ const Admin = async () => {
     const appointments = await getRecentAppointmentList();
 
     return (
-        <div className='mx-auto flex max-w-6xl flex-col space-y-10 '>
-            <header className='admin-header'>
+        <div className='mx-auto flex lg:max-w-6xl flex-col space-y-10 '>
+            <header className='admin-header container'>
                 <Link href='/' className="flex items-center gap-1">
                     <Image
                         src='/assets/icons/logo-icon.svg'
@@ -27,7 +27,7 @@ const Admin = async () => {
                     <h2 className="font-Dana-Bold text-xl"> مدیک‌<span className=" text-sky-500">پلاس</span></h2>
                 </Link>
 
-                <button className='mr-14 relative flex h-10 px-3 bg-dark-200 items-center justify-center rounded-xl cursor-pointer'>
+                <button className='hidden lg:flex mr-14 relative  h-10 px-3 bg-dark-200 items-center justify-center rounded-xl cursor-pointer'>
                     <ImCommand className='w-5 h-5 text-dark-600' />
                     <Input
                         type='search'
@@ -53,7 +53,7 @@ const Admin = async () => {
                 </div>
             </header>
 
-            <main className='admin-main'>
+            <main className='admin-main container'>
                 <section className='admin-stat'>
                     <StatCard
                         type="appointments"
