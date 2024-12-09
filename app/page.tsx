@@ -28,7 +28,7 @@ export default function Home({searchParams} : SearchParamProps) {
 
           <PatientForm />
 
-          <div className="text-sm mt-10 flex items-center justify-between ">
+          <div className="text-sm mt-10 flex flex-col md:flex-row items-center md:justify-between ">
             <p className="text-dark-600">
               &copy; {new Date().getFullYear()} مدیک پلاس. تمامی حقوق محفوظ است.
             </p>
