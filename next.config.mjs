@@ -3,7 +3,7 @@ const nextConfig = {
     typescript : {
         ignoreBuildErrors : true
     },
-    eslintl: {
+    eslint: {
         ignoreBuildErrors : true
     }
 };
