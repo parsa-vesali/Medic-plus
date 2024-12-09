@@ -68,7 +68,7 @@ const PassKeyModal = () => {
 
 
     return (
-        <AlertDialog open={open} onOpenChange={setOpen}>
+        <AlertDialog open={open} onOpenChange={setOpen} >
             <AlertDialogContent dir='rtl' className='shad-alert-dialog'>
                 <AlertDialogHeader>
                     <AlertDialogTitle className='flex items-start justify-between font-light font-Dana-Medium'>
