@@ -11,13 +11,8 @@ interface StatCardProps {
 
 const StatCard = ({ type, label, icon, count }: StatCardProps) => {
     return (
-        <div className={clsx("stat-card ", {
-            "bg-appointments": type === "appointments",
-            "bg-pending": type === "pending",
-            "bg-cancelled": type === "cancelled",
-        })}>
-
-            <div className="flex items-center gap-4">
+        <div className="stat-card">
+            <span className='size-12 flex items-center justify-center bg-dark-300 rounded-xl'>
                 <Image
                     src={icon}
                     alt={label}
@@ -25,12 +20,13 @@ const StatCard = ({ type, label, icon, count }: StatCardProps) => {
                     width={32}
                     className='size-8 w-fit'
                 />
-                <h2 className='text-32-bold text-white'>{count}</h2>
+            </span>
+            <div className='space-y-2'>
+                <p className='text-14-regular'>
+                    {label}
+                </p>
+                <h2 className='text-2xl font-Dana-Bold text-zinc-200'>{count}</h2>
             </div>
-
-            <p className='text-14-regular'>
-                {label}
-            </p>
         </div>
     )
 }

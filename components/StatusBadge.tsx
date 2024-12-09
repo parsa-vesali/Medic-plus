@@ -3,6 +3,12 @@ import Image from 'next/image'
 import React from 'react'
 import { StatusIcon } from '@/constant'
 
+const statusText: Record<Status, string> = {
+  "scheduled": "مقرر شده",
+  "pending": "در حال انتظار",
+  "cancelled": "لغو شده",
+}
+
 const StatusBadge = ({ status }: { status: Status }) => {
   return (
     <div
@@ -20,13 +26,13 @@ const StatusBadge = ({ status }: { status: Status }) => {
         className="h-fit w-3"
       />
       <p
-        className={clsx("text-12-semibold capitalize", {
+        className={clsx("text-xs", {
           "text-green-500": status === "scheduled",
           "text-blue-500": status === "pending",
           "text-red-500": status === "cancelled",
         })}
       >
-        {status}
+        {statusText[status]}
       </p>
     </div>
   )

@@ -14,7 +14,7 @@ const Admin = async () => {
     const appointments = await getRecentAppointmentList();
 
     return (
-        <div className='mx-auto flex max-w-7xl flex-col space-y-14 '>
+        <div className='mx-auto flex max-w-6xl flex-col space-y-10 '>
             <header className='admin-header'>
                 <Link href='/' className="flex items-center gap-1">
                     <Image
@@ -27,7 +27,7 @@ const Admin = async () => {
                     <h2 className="font-Dana-Bold text-xl"> مدیک‌<span className=" text-sky-500">پلاس</span></h2>
                 </Link>
 
-                <button className='relative flex h-10 px-3 bg-dark-200 items-center justify-center rounded-xl cursor-pointer'>
+                <button className='mr-14 relative flex h-10 px-3 bg-dark-200 items-center justify-center rounded-xl cursor-pointer'>
                     <ImCommand className='w-5 h-5 text-dark-600' />
                     <Input
                         type='search'
@@ -53,15 +53,7 @@ const Admin = async () => {
                 </div>
             </header>
 
-
-            {/* <main className='admin-main'>
-                <section className='w-full space-y-4'>
-                    <h2 className='header'>خوش آمدید 👋</h2>
-                    <p className='text-dark-700'>
-                        مدیریت و سازماندهی نوبت‌های جدید را آغاز کنید.
-                    </p>
-                </section>
-
+            <main className='admin-main'>
                 <section className='admin-stat'>
                     <StatCard
                         type="appointments"
@@ -77,14 +69,17 @@ const Admin = async () => {
                     />
                     <StatCard
                         type="cancelled"
-                        count={appointments.cancelledCount} 
+                        count={appointments.cancelledCount}
                         label="نوبت‌های لغوشده"
                         icon={"/assets/icons/cancelled.svg"}
                     />
                 </section>
 
-                <DataTable columns={columns} data={appointments.documents} />
-            </main> */}
+                <section className='w-full'>
+                    <DataTable columns={columns} data={appointments.documents} />
+                </section>
+            </main>
+
         </div>
     )
 }
