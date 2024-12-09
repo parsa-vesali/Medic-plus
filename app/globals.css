@@ -148,7 +148,9 @@
   .data-table {
     @apply z-10 w-full overflow-hidden rounded-lg border border-dark-200 ;
   }
-
+  .table-header {
+    @apply text-right pr-2 !important;
+  }
   .table-actions {
     @apply flex w-full items-center justify-between space-x-2 p-4;
   }
@@ -254,6 +256,13 @@
     @apply bg-dark-400 border-dark-500 !important;
   }
 
+  .dialog-header {
+    @apply text-center !important;
+  }
+
+  .dialog-header h2 {
+    @apply font-Dana font-normal !important
+  }
   .shad-dialog button {
     @apply focus:ring-0 focus:ring-offset-0 focus-visible:border-none focus-visible:outline-none focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
   }
@@ -263,15 +272,15 @@
   }
 
   .shad-table {
-    @apply rounded-lg overflow-hidden text-right !important;
-  }
+    @apply rounded-lg overflow-hidden  !important;
+  } 
 
   .shad-table-row-header {
-    @apply border-b border-dark-400 text-light-200 hover:bg-transparent text-right !important;
+    @apply border-b border-dark-400 text-light-200 hover:bg-transparent !important;
   }
 
   .shad-table-row {
-    @apply border-b border-dark-400 text-light-200 text-right !important;
+    @apply border-b border-dark-400 text-light-200 !important;
   }
 
   .shad-otp {

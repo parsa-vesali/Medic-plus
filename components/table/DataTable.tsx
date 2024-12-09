@@ -38,12 +38,12 @@ export function DataTable<TData, TValue>({
   return (
     <div className="data-table w-full">
       <Table className="shad-table">
-        <TableHeader className=" bg-dark-200 text-left">
+        <TableHeader className="bg-dark-200">
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id} className="shad-table-row-header">
-              {headerGroup.headers.map((header) => {
+              {headerGroup.headers.map((header) => {  
                 return (
-                  <TableHead key={header.id}>
+                  <TableHead key={header.id} className="table-header">
                     {header.isPlaceholder
                       ? null
                       : flexRender(
