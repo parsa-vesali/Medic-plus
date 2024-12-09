@@ -18,7 +18,12 @@ A healthcare patient management application built with Next.js, allowing patient
 </p>
 
 
+
 ## preview 🖼️:
 
-![shopping link](https://github.com/parsa-vesali/panel/blob/main/Screenshot%202024-07-02%20071100.png)
-![shopping link](https://github.com/parsa-vesali/panel/blob/main/Screenshot%202024-07-02%20071122.png)
+address 🔗 : https://medic-plus-two.vercel.app/
+
+
+![shopping link](https://github.com/parsa-vesali/Medic-plus/blob/main/demo/Screenshot_8-12-2024_124244_localhost.jpeg)
+![shopping link](https://github.com/parsa-vesali/Medic-plus/blob/main/demo/Screenshot_8-12-2024_124428_localhost.jpeg)
+![shopping link](https://github.com/parsa-vesali/Medic-plus/blob/main/demo/Screenshot_8-12-2024_124616_localhost.jpeg)
